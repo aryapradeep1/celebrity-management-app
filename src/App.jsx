@@ -6,15 +6,18 @@ import './App.css'
 import ViewAttendee from './components/ViewAttendee'
 import ViewTicket from './components/ViewTicket'
 import ViewLongue from './components/ViewLongue'
+import HomePage from './components/HomePage'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
+    <HomePage/>
       <ViewAttendee />
       <ViewTicket />
       <ViewLongue/>
+
     </>
   )
 }
