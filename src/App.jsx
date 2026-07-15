@@ -5,6 +5,7 @@ import './App.css'
 
 import ViewAttendee from './components/ViewAttendee'
 import ViewTicket from './components/ViewTicket'
+import ViewLongue from './components/ViewLongue'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -13,6 +14,7 @@ function App() {
     <>
       <ViewAttendee />
       <ViewTicket />
+      <ViewLongue/>
     </>
   )
 }
