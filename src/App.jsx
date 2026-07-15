@@ -7,12 +7,14 @@ import ViewAttendee from './components/ViewAttendee'
 import ViewTicket from './components/ViewTicket'
 import ViewLongue from './components/ViewLongue'
 import HomePage from './components/HomePage'
+import NaviBar from './components/NaviBar'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
+    <NaviBar/>
     <HomePage/>
       <ViewAttendee />
       <ViewTicket />
