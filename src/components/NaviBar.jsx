@@ -23,43 +23,43 @@ const NaviBar = () => {
             <ul className="navbar-nav ms-auto">
 
               <li className="nav-item">
-                <a className="nav-link active" href="#">
+                <a className="nav-link active" href="home">
                   Home
                 </a>
               </li>
 
               <li className="nav-item">
-                <a className="nav-link" href="">
+                <a className="nav-link" href="/add">
                   Add Attendee
                 </a>
               </li>
 
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link" href="view">
                   View Attendee
                 </a>
               </li>
 
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link" href="add_ticket">
                   Add Ticket
                 </a>
               </li>
 
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link" href="view_ticket">
                   View Ticket
                 </a>
               </li>
 
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link" href="add_lounge">
                   Add Lounge
                 </a>
               </li>
 
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link" href="view_lounge">
                   View Lounge
                 </a>
               </li>
