@@ -1,5 +1,5 @@
 import axios from 'axios'
-import React from 'react'
+import React, { useState } from 'react'
 
 const AddLounge = () => {
     const [input, changeInput] = useState(
@@ -19,7 +19,7 @@ const AddLounge = () => {
     }
     const readValue = () => {
         console.log(input)
-        axios.post("", input).then(
+        axios.post("http://localhost:7500/add-lounge", input).then(
             (response) => {
                 console.log(response.data)
                 alert("Entry added successfully")
