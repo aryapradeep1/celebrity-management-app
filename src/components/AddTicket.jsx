@@ -1,3 +1,4 @@
+import axios from 'axios'
 import React, { useState } from 'react'
 
 const AddTicket = () => {
@@ -18,10 +19,10 @@ const AddTicket = () => {
     }
     const readValue = () => {
         console.log(input)
-        axios.post("", input).then(
+        axios.post("http://localhost:7500/add-ticket", input).then(
             (response) => {
                 console.log(response.data)
-                alert("Entry added successfully")
+                alert("Ticket added successfully")
             }
         ).catch(
             (error) => {
@@ -59,6 +60,7 @@ const AddTicket = () => {
 
                                 <label htmlFor="" className="form-label">Ticket category</label>
                                 <select name="TicketCategory" id="" className="form-select" value={input.TicketCategory} onChange={inputHandler}>
+                                    <option value="">Select Class</option>
                                     <option value="">Premium</option>
                                     <option value="">Semi premium</option>
                                     <option value="">Normal</option>
@@ -81,7 +83,7 @@ const AddTicket = () => {
                             
                             <div className="col col-12 col-sm-6 col-md-4">
                                 <label htmlFor="" className="form-form">Payment Amount</label>
-                                <input type="text" className="form-control" name="PaymentAmount" placeholder="abc@mail.com" value={input.PaymentAmount} onChange={inputHandler} />
+                                <input type="text" className="form-control" name="PaymentAmount" value={input.PaymentAmount} onChange={inputHandler} />
                             </div>
                             <div className="col col-12 col-sm-6 col-md-4">
                                 <label htmlFor="" className="form-form">Payment Status</label>
