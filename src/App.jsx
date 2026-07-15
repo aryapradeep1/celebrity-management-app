@@ -3,14 +3,14 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
-import ViewAttendee from './components/ViewAttendee'
+import AddAttendee from './components/AddAttendee'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-    <ViewAttendee/>
+    <AddAttendee/>
     </>
   )
 }
