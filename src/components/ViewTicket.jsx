@@ -1,59 +1,21 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 
 const ViewTicket = () => {
 
-    const data = [
-        {
-            ticketId: "T001",
-            registrationId: "REG001",
-            celebrityName: "Mohanlal",
-            ticketCategory: "VIP",
-            numberOfGuests: 2,
-            preferredTimeSlot: "10:00 AM - 11:00 AM",
-            paymentAmount: "₹5000",
-            paymentStatus: "Paid"
-        },
-        {
-            ticketId: "T002",
-            registrationId: "REG002",
-            celebrityName: "Mammootty",
-            ticketCategory: "Gold",
-            numberOfGuests: 3,
-            preferredTimeSlot: "11:30 AM - 12:30 PM",
-            paymentAmount: "₹3000",
-            paymentStatus: "Paid"
-        },
-        {
-            ticketId: "T003",
-            registrationId: "REG003",
-            celebrityName: "Prithviraj",
-            ticketCategory: "Silver",
-            numberOfGuests: 1,
-            preferredTimeSlot: "02:00 PM - 03:00 PM",
-            paymentAmount: "₹1500",
-            paymentStatus: "Pending"
-        },
-        {
-            ticketId: "T004",
-            registrationId: "REG004",
-            celebrityName: "Dulquer Salmaan",
-            ticketCategory: "VIP",
-            numberOfGuests: 4,
-            preferredTimeSlot: "03:30 PM - 04:30 PM",
-            paymentAmount: "₹8000",
-            paymentStatus: "Paid"
-        },
-        {
-            ticketId: "T005",
-            registrationId: "REG005",
-            celebrityName: "Fahadh Faasil",
-            ticketCategory: "Gold",
-            numberOfGuests: 2,
-            preferredTimeSlot: "05:00 PM - 06:00 PM",
-            paymentAmount: "₹4000",
-            paymentStatus: "Pending"
-        }
-    ];
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        axios
+            .post("http://localhost:7500/view-all-tickets")
+            .then((response) => {
+                console.log(response.data);
+                setData(response.data);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+    }, []);
 
     return (
         <div className="container mt-4">
@@ -79,14 +41,14 @@ const ViewTicket = () => {
                         <tbody>
                             {data.map((value, index) => (
                                 <tr key={index}>
-                                    <td>{value.ticketId}</td>
-                                    <td>{value.registrationId}</td>
-                                    <td>{value.celebrityName}</td>
-                                    <td>{value.ticketCategory}</td>
-                                    <td>{value.numberOfGuests}</td>
-                                    <td>{value.preferredTimeSlot}</td>
-                                    <td>{value.paymentAmount}</td>
-                                    <td>{value.paymentStatus}</td>
+                                    <td>{value.TicketID}</td>
+                                    <td>{value.RegistrationID}</td>
+                                    <td>{value.CelebrityName}</td>
+                                    <td>{value.TicketCategory}</td>
+                                    <td>{value.NumberofGuests}</td>
+                                    <td>{value.PreferredTimeSlot}</td>
+                                    <td>{value.PaymentAmount}</td>
+                                    <td>{value.PaymentStatus}</td>
                                 </tr>
                             ))}
                         </tbody>
