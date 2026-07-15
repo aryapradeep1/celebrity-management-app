@@ -19,7 +19,7 @@ const AddLounge = () => {
     }
     const readValue = () => {
         console.log(input)
-        axios.post("", input).then(
+        axios.post("http://localhost:7500/add-lounge", input).then(
             (response) => {
                 console.log(response.data)
                 alert("Entry added successfully")
