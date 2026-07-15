@@ -6,16 +6,25 @@ const ViewLongue = () => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
+        fetchData();
+    }, []);
+
+    const fetchData = () => {
         axios
             .post("http://localhost:7500/view-all-lounges")
             .then((response) => {
                 console.log(response.data);
-                setData(response.data);
+
+                if (Array.isArray(response.data)) {
+                    setData(response.data);
+                } else {
+                    setData([]);
+                }
             })
             .catch((error) => {
-                console.log(error);
+                console.error("Error fetching lounge data:", error);
             });
-    }, []);
+    };
 
     return (
         <div className="container mt-4">
@@ -39,18 +48,26 @@ const ViewLongue = () => {
                         </thead>
 
                         <tbody>
-                            {data.map((value, index) => (
-                                <tr key={index}>
-                                    <td>{value.AllocationID}</td>
-                                    <td>{value.RegistrationID}</td>
-                                    <td>{value.LoungeNumber}</td>
-                                    <td>{value.SeatNumber}</td>
-                                    <td>{value.CheckinTime}</td>
-                                    <td>{value.MeetDuration}</td>
-                                    <td>{value.StaffCoordinator}</td>
-                                    <td>{value.Remarks}</td>
+                            {data.length > 0 ? (
+                                data.map((value, index) => (
+                                    <tr key={index}>
+                                        <td>{value.AllocationID}</td>
+                                        <td>{value.RegistrationID}</td>
+                                        <td>{value.LoungeNumber}</td>
+                                        <td>{value.SeatNumber}</td>
+                                        <td>{value.CheckinTime}</td>
+                                        <td>{value.MeetDuration}</td>
+                                        <td>{value.StaffCoordinator}</td>
+                                        <td>{value.Remarks}</td>
+                                    </tr>
+                                ))
+                            ) : (
+                                <tr>
+                                    <td colSpan="8" className="text-center">
+                                        No lounge records found
+                                    </td>
                                 </tr>
-                            ))}
+                            )}
                         </tbody>
 
                     </table>

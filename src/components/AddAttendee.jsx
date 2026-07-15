@@ -12,19 +12,19 @@ const AddAttendee = () => {
                             <div className="col col-12 col-sm-6 col-md-4">
 
                                 <label htmlFor="" className="form-label">Registration Id</label>
-                                <input type="text" className="form-control" name=""  value={input.teamId} onChange={inputHandler} />
+                                <input type="text" className="form-control" name=""  />
 
                             </div>
                             <div className="col col-12 col-sm-6 col-md-4">
 
                                 <label htmlFor="" className="form-label">Attendee Name</label>
-                                <input type="text" className="form-control" name="" value={input.teamName} onChange={inputHandler} />
+                                <input type="text" className="form-control" name=""  />
 
                             </div>
                             <div className="col col-12 col-sm-6 col-md-4">
 
                                 <label htmlFor="" className="form-label">Age</label>
-                                <input type="text" className="form-control" name="" value={input.teamLeaderName} onChange={inputHandler} />
+                                <input type="text" className="form-control" name=""  />
 
                             </div>
                             <div className="col col-12 col-sm-6 col-md-4">
@@ -40,28 +40,28 @@ const AddAttendee = () => {
                             
                             <div className="col col-12 col-sm-6 col-md-4">
                                 <label htmlFor="" className="form-form">Date of birth</label>
-                                <input type="date" className="form-control" name="" value={input.regDate} onChange={inputHandler} />
+                                <input type="date" className="form-control" name=""  />
                             </div>
                             
                             <div className="col col-12 col-sm-6 col-md-4">
 
                                 <label htmlFor="" className="form-label">Mobile Number</label>
-                                <input type="tel" className="form-control" name=""  value={input.mentorName} onChange={inputHandler} />
+                                <input type="tel" className="form-control" name=""   />
 
                             </div>
 
                             
                             <div className="col col-12 col-sm-6 col-md-4">
                                 <label htmlFor="" className="form-form">E-Mail</label>
-                                <input type="text" className="form-control" name="" placeholder="abc@mail.com" value={input.table} onChange={inputHandler} />
+                                <input type="text" className="form-control" name="" placeholder="abc@mail.com"  />
                             </div>
                             <div className="col col-12 col-sm-6 col-md-4">
                                 <label htmlFor="" className="form-form">City</label>
-                                <input type="text" className="form-control" name="" value={input.table} onChange={inputHandler} />
+                                <input type="text" className="form-control" name=""/>
                             </div>
                             <div className="col col-12">
 
-                                <button className="btn btn-success" onClick={readValue}>Submit</button>
+                                <button className="btn btn-success" >Submit</button>
 
                             </div>
                         </div>
