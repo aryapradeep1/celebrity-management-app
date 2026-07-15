@@ -8,6 +8,8 @@ import ViewTicket from './components/ViewTicket'
 import ViewLongue from './components/ViewLongue'
 import HomePage from './components/HomePage'
 import NaviBar from './components/NaviBar'
+import AddAttendee from './components/AddAttendee'
+import AddTicket from './components/AddTicket'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -20,6 +22,8 @@ function App() {
       <ViewTicket />
       <ViewLongue/>
 
+    <AddAttendee/>
+    <AddTicket/>
     </>
   )
 }
