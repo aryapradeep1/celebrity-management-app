@@ -1,17 +1,17 @@
 import React from 'react'
 
-const AddTicket = () => {
+const AddLounge = () => {
   return (
     <div>
 
 <div className="container mt-4 mb-4">
                 <div className="row">
                     <div className="col col-12 text-center">
-                        <h1>Ticket Details Here!</h1>
+                        <h1>Book your Lounge!</h1>
                         <div className="row g-4 mt-4">
                             <div className="col col-12 col-sm-6 col-md-4">
 
-                                <label htmlFor="" className="form-label">Ticket Id</label>
+                                <label htmlFor="" className="form-label">Allocation Id</label>
                                 <input type="text" className="form-control" name=""  />
 
                             </div>
@@ -23,45 +23,41 @@ const AddTicket = () => {
                             </div>
                             <div className="col col-12 col-sm-6 col-md-4">
 
-                                <label htmlFor="" className="form-label">Celebrity Name</label>
+                                <label htmlFor="" className="form-label">Lounge Number</label>
                                 <input type="text" className="form-control" name=""  />
 
                             </div>
                             <div className="col col-12 col-sm-6 col-md-4">
-
-                                <label htmlFor="" className="form-label">Ticket category</label>
-                                <select name="" id="" className="form-select">
-                                    <option value="">Premium</option>
-                                    <option value="">Semi premium</option>
-                                    <option value="">Others</option>
-                                </select>
-
+                                <label htmlFor="" className="form-form">Seat Number</label>
+                                <input type="text" className="form-control" name=""  />
                             </div>
-                            
                             <div className="col col-12 col-sm-6 col-md-4">
-                                <label htmlFor="" className="form-form">Number of guests</label>
+                                <label htmlFor="" className="form-form">Check in Time</label>
                                 <input type="text" className="form-control" name=""  />
                             </div>
                             
+                            
+                            
+                            
                             <div className="col col-12 col-sm-6 col-md-4">
 
-                                <label htmlFor="" className="form-label">Preferred Time Slot</label>
+                                <label htmlFor="" className="form-label">Meet Duration</label>
                                 <input type="text" className="form-control" name=""   />
 
                             </div>
 
                             
                             <div className="col col-12 col-sm-6 col-md-4">
-                                <label htmlFor="" className="form-form">Payment Amount</label>
-                                <input type="text" className="form-control" name="" placeholder="UPI accepted"  />
+                                <label htmlFor="" className="form-form">Staff coordinator</label>
+                                <input type="text" className="form-control" name=""   />
                             </div>
                             <div className="col col-12 col-sm-6 col-md-4">
-                                <label htmlFor="" className="form-form">Payment Status</label>
+                                <label htmlFor="" className="form-form">Remarks</label>
                                 <input type="text" className="form-control" name=""/>
                             </div>
                             <div className="col col-12">
 
-                                <button className="btn btn-success" >Get Ticket</button>
+                                <button className="btn btn-success" >Book Lounge</button>
 
                             </div>
                         </div>
@@ -69,9 +65,9 @@ const AddTicket = () => {
                     </div>
                 </div>
             </div>
-        
+
     </div>
   )
 }
 
-export default AddTicket
+export default AddLounge
